@@ -32,7 +32,7 @@ int main(int argc, char **argv)
         Rio_readlineb(&rio, buf, MAXLINE);
         // buf에 받은 값을 표준출력으로 출력
         Fputs(buf, stdout);
-    }
+    } // 서버에서 echo를 종료하여도 두번입력을 받기 전까지 client가 끝나지 않는다. 원인을 찾고싶다.
 
     // 클라이언트 fd 닫기
     Close(clientfd);
